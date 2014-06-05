@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6154.17" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <deployment version="1536" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.11"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="LayoutConstraintHelperDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rTW-Cn-qHh"/>
+                        <viewControllerLayoutGuide type="bottom" id="OPF-3h-nTt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="fPl-IP-paH">
+                                <rect key="frame" x="192" y="226" width="97" height="29"/>
+                                <segments>
+                                    <segment title="Small"/>
+                                    <segment title="Big"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentedControl:" destination="vXZ-lx-hvc" eventType="valueChanged" id="b3D-5R-RAZ"/>
+                                </connections>
+                            </segmentedControl>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="185-L3-dtt">
+                                <rect key="frame" x="190" y="52" width="100" height="100"/>
+                                <color key="backgroundColor" red="0.26274511220000002" green="0.9215686917" blue="0.2196078598" alpha="1" colorSpace="deviceRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="6yC-DX-srO"/>
+                                    <constraint firstAttribute="height" constant="100" id="k8V-VA-Fbm"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="OPF-3h-nTt" firstAttribute="top" secondItem="185-L3-dtt" secondAttribute="bottom" constant="328" id="5bv-JM-CRb"/>
+                            <constraint firstAttribute="centerX" secondItem="185-L3-dtt" secondAttribute="centerX" id="C1A-Qi-mBb"/>
+                            <constraint firstAttribute="centerX" secondItem="fPl-IP-paH" secondAttribute="centerX" id="e0Y-SB-lGd"/>
+                            <constraint firstAttribute="centerY" secondItem="fPl-IP-paH" secondAttribute="centerY" id="q2T-wb-dtq"/>
+                        </constraints>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <connections>
+                        <outlet property="yellowView" destination="185-L3-dtt" id="cWX-Co-F9I"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-33" y="135"/>
+        </scene>
+    </scenes>
+</document>
