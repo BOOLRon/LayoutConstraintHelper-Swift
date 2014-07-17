@@ -11,7 +11,7 @@ import UIKit
 extension UIView {
     
     func widthConstraint() -> NSLayoutConstraint? {
-        let constraints = self.constraints() as NSLayoutConstraint[]
+        let constraints = self.constraints() as [NSLayoutConstraint]
         for constraint in constraints{
             
             if(constraint.firstAttribute == .Width && !constraint.secondItem && constraint.relation == .Equal){
@@ -25,7 +25,7 @@ extension UIView {
     }
 
     func heightConstraint() -> NSLayoutConstraint? {
-        let constraints = self.constraints() as NSLayoutConstraint[]
+        let constraints = self.constraints() as [NSLayoutConstraint]
         for constraint in constraints{
             
             if(constraint.firstAttribute == .Height && !constraint.secondItem && constraint.relation == .Equal){
@@ -45,7 +45,7 @@ extension UIView {
             topLayoutGuide = controller.topLayoutGuide
         }
         
-        let constraints = self.superview.constraints() as NSLayoutConstraint[]
+        let constraints = self.superview.constraints() as [NSLayoutConstraint]
         
         for constraint in constraints{
             
@@ -69,7 +69,7 @@ extension UIView {
             bottomLayoutGuide = controller.bottomLayoutGuide
         }
         
-        let constraints = self.superview.constraints() as NSLayoutConstraint[]
+        let constraints = self.superview.constraints() as [NSLayoutConstraint]
         
         for constraint in constraints{
             
@@ -86,7 +86,7 @@ extension UIView {
     }
     
     func left2SupviewConstraint() -> NSLayoutConstraint?{
-        let constraints = self.superview.constraints() as NSLayoutConstraint[]
+        let constraints = self.superview.constraints() as [NSLayoutConstraint]
         for constraint in constraints{
             
             if(constraint.firstItem.isEqual(self) && constraint.firstAttribute == .Leading && constraint.secondAttribute == .Leading){
@@ -99,7 +99,7 @@ extension UIView {
     
     
     func right2SupviewConstraint() -> NSLayoutConstraint?{
-        let constraints = self.superview.constraints() as NSLayoutConstraint[]
+        let constraints = self.superview.constraints() as [NSLayoutConstraint]
         for constraint in constraints{
             
             if(constraint.firstItem.isEqual(self.superview) && self.isEqual(constraint.secondItem) && constraint.firstAttribute == .Trailing && constraint.secondAttribute == .Trailing){
